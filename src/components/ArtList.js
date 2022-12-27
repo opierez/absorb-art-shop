@@ -6,7 +6,7 @@ function ArtList({ art }) {
     // console.log(art)
 
     const renderArtList = art.map(artpiece => {
-        <ArtCard key={artpiece.id} artpiece={artpiece}/>
+        return <ArtCard key={artpiece.id} artpiece={artpiece}/>
     })
 
     return (
