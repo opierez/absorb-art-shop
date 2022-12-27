@@ -1,0 +1,58 @@
+{
+    "artwork": [
+        {
+            "id": 1,
+            "artist": "Iris Sagitta",
+            "image": "",
+            "title": "Notes on facial hatred",
+            "price": 495.00,
+            "description": "August, 2022; self-portrait; medium format black-and-white negative; shot at the Highlight Studios in the Penumbra Foundation ",
+            "mediums": ["photography", "silver gelatin", "silver gelatin print", "photography print"]
+        },
+        {
+            "id": 2,
+            "artist": "",
+            "image": "",
+            "title": "",
+            "price": 0,
+            "description": "",
+            "mediums": ""
+        },
+        {
+            "id": 3,
+            "artist": "",
+            "image": "",
+            "title": "",
+            "price": 0,
+            "description": "",
+            "mediums": ""
+        },
+        {
+            "id": 4,
+            "artist": "",
+            "image": "",
+            "title": "",
+            "price": 0,
+            "description": "",
+            "mediums": ""
+        },
+        {
+            "id": 5,
+            "artist": "",
+            "image": "",
+            "title": "",
+            "price": 0,
+            "description": "",
+            "mediums": ""
+        }, 
+        {
+            "id": 6,
+            "artist": "",
+            "image": "",
+            "title": "",
+            "price": 0,
+            "description": "",
+            "mediums": ""
+        }
+    ]
+}
