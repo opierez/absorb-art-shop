@@ -1,15 +1,26 @@
-import React from 'react'
-import ArtPiece from './ArtPiece'
+import React, {useState, useEffect} from 'react'
+import ArtList from './ArtList'
 import Cart from './Cart'
 import Search from './Search'
 
 function ArtContainer() {
+
+    const [artwork, setArtwork] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:6001/artwork')
+            .then(resp => resp.json())
+            .then(setArtwork)
+    }, [])
+
+    // console.log(artwork)
+
     return (
-        <div>
-            <ArtPiece />
+        <main>
+            <ArtList art={artwork}/>
             <Cart />
             <Search />
-        </div>
+        </main>
     )
 }
 
