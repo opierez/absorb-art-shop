@@ -56,6 +56,23 @@ h1 span:last-child{
     width: 90%;
     margin-left: 1rem;
 }
+.down-arrow a{
+    background-color: rgba(0, 0, 0, 0.015);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 1px solid black;
+}
+.downbtn{
+    stroke-width: 0.25px;
+}
 
 @media screen and (max-width: 800px) {
     .header-container {
