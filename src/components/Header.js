@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Header.css';
 import mercury_and_psyche from '../style-images/mercury_and_psyche.jpeg'
-import {BsChevronCompactDown} from 'react-icons/bs'
+
+
 function Header() {
     return (
        <section id='header'>
@@ -22,9 +23,7 @@ function Header() {
                </div>
             </div>
             <div className='down-arrow'>
-                <a href='#'>
-                    <BsChevronCompactDown size={35} className='downbtn'/>
-                </a>
+                <a href='#'>'(down arrow)'</a>
             </div>
        </section>
     )
