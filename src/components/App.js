@@ -7,10 +7,10 @@ import ArtContainer from './ArtContainer';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <section className="App-header">
+        <NavBar />
         <Header />
-      </header>
-      <NavBar />
+      </section>
       <ArtContainer />
     </div>
   );
