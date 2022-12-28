@@ -17,9 +17,9 @@ function ArtContainer() {
 
     return (
         <main>
+            <Search />
             <ArtList art={artwork}/>
             <Cart />
-            <Search />
         </main>
     )
 }

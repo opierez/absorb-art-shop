@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/Header.css';
 import mercury_and_psyche from '../style-images/mercury_and_psyche.jpeg'
 import {BsChevronCompactDown} from 'react-icons/bs'
+
+
 function Header() {
     return (
        <section id='header'>
@@ -20,11 +22,11 @@ function Header() {
                <div className='header-right'>
                     <img src={mercury_and_psyche} />
                </div>
-            </div>
-            <div className='down-arrow'>
+               <div className='down-arrow'>
                 <a href='#'>
                     <BsChevronCompactDown size={35} className='downbtn'/>
                 </a>
+            </div>
             </div>
        </section>
     )

@@ -3,6 +3,7 @@ import '../styles/NavBar.css';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {RiCloseLine} from 'react-icons/ri';
+
 function NavBar() {
     const [showMenu, setShowMenu] = useState(false)
     function toggleMenu(){

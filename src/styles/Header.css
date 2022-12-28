@@ -1,5 +1,6 @@
 #header{
     position: relative;
+    
 }
 .header-container{
     display: flex;
@@ -72,10 +73,12 @@ h1 span:last-child{
 .downbtn{
     stroke-width: 0.25px;
 }
+
 @media screen and (max-width: 800px) {
     .header-container {
       flex-direction: column;
     }
+  
     .header-left,
     .header-right {
       display: flex;
@@ -85,9 +88,11 @@ h1 span:last-child{
       text-align: center;
       margin: 0 auto;
     }
+  
     .header-left {
       margin-bottom: 4rem;
     }
+  
     .header-container h1::after {
         left: 50%;
         transform: translateX(-50%);
@@ -96,3 +101,4 @@ h1 span:last-child{
      width: 80%;
     }
   }
+  
