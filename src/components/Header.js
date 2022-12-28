@@ -22,9 +22,6 @@ function Header() {
                     <img src={mercury_and_psyche} />
                </div>
             </div>
-            <div className='down-arrow'>
-                <a href='#'>'(down arrow)'</a>
-            </div>
        </section>
     )
 }
