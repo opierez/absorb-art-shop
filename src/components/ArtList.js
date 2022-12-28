@@ -11,6 +11,7 @@ function ArtList({ art }) {
 
     return (
         <ul className="cards">{renderArtList}</ul>
+       
     )
 }
 

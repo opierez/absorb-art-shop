@@ -2,22 +2,22 @@ import React from 'react'
 
 function ArtCard({ artpiece }) {
 
-    console.log(artpiece)
+    // console.log(artpiece)
 
     const { artist, image, icon, title, price, description} = artpiece
 
     // console.log(artist)
+    // console.log(icon)
 
 
     return (
-        <li className='card'>
-            <h4>{artist}</h4>
-            <img src={image} alt={title} />
+        <div className='card'>
+            <h2>{artist}</h2>
             <img src={icon} alt={title} />
-            <p>{title}</p>
-            <p>{price}</p>
+            <h4>{title}</h4>
+            <h4>{price}</h4>
             <p>{description}</p>
-        </li>
+        </div>
     )
 }
 
