@@ -5,7 +5,7 @@ function ArtCard({ artpiece }) {
 
     // console.log(artpiece)
 
-    const { artist, image, icon, title, price, description} = artpiece
+    const { artist, image, product, title, price} = artpiece
 
     // console.log(artist)
     // console.log(icon)
@@ -14,10 +14,11 @@ function ArtCard({ artpiece }) {
     return (
         <li className='card'>
             <h2>{artist}</h2>
-            <img src={icon} alt={title} />
+            <img src={image} alt={title} />
             <h4>{title}</h4>
-            <h4>{price}</h4>
-            <p>{description}</p>
+            <p>{product} • {`$${parseFloat(price).toFixed(2)}`} </p>
+    
+            
         </li>
     )
 }

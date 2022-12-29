@@ -3,22 +3,53 @@
         {
             "id": 1,
             "artist": "Iris Sagitta",
-            "image": "./images/iris_sagitta.jpeg",
-            "icon": "./images/iris_sagitta_icon.jpg",
-            "title": "Notes on facial hatred",
+            "image": "./images/Notes.jpeg",
+            "title": "Notes on Facial Hatred",
+            "product": "30x30\" Silver Gelatin Print", 
             "price": 495.00,
-            "description": "August, 2022; self-portrait; medium format black-and-white negative; shot at the Highlight Studios in the Penumbra Foundation",
-            "mediums": ["photography", "silver gelatin", "silver gelatin print", "photography print"]
+            "description": "August, 2022; self-portrait",
+            "mediums": ["photography", "silver gelatin", "silver gelatin print", "photography print", "medium format photography", "black and white photography"]
         },
         {
             "id": 2,
             "artist": "Mike Falco",
             "image": "./images/Election_Security.jpeg",
-            "icon": "./images/Election_Security_Icon.jpg",
             "title": "Election Security",
+            "product": "20x24\" Inkjet Print",
             "price": 50.00,
             "description": "Editorial Illustration",
             "mediums": ["inkjet print", "print", "illustration", "editorial"]
+        },
+        {
+            "id": 3,
+            "artist": "Renee Xie",
+            "image": "./images/Lone.jpeg",
+            "title": "Lone",
+            "product": "20x24\" Inkjet Print",
+            "price": 500.00,
+            "description": "Distance comes, distance goes. I stayed and stared, alone. ",
+            "mediums": ["photography", "print", "digital photography", "photography print"]
+        },
+        {
+            "id": 4,
+            "artist": "Chloe Pecorino",
+            "image": "./images/Dress.jpg",
+            "title": "Dot Cut-Out Belly Dress",
+            "product": "Vintage Cotton Jacquard Dress",
+            "price": 500.00,
+            "description": "Designed to show off the midriff using vintage materials. ",
+            "mediums": ["fashion", "vintage"]
+        },
+        {
+            "id": 5,
+            "artist": "Olivia Perez",
+            "image": "./images/Andy.jpg",
+            "title": "The End and The Beginning",
+            "product": "11x14\" Kallitype Print",
+            "price": 250.00,
+            "description": "Kallitype Over Inkjet",
+            "mediums": ["photography", "kallitype print", "inkjet print", "photography print", "print"]
         }
+
     ]
 }
