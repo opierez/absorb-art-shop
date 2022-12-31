@@ -3,6 +3,7 @@ import '../styles/NavBar.css';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {RiCloseLine} from 'react-icons/ri';
+import {Link} from 'react-router-dom'
 
 function NavBar() {
     const [showMenu, setShowMenu] = useState(false)
@@ -16,10 +17,10 @@ function NavBar() {
             </div>
             <menu>
                 <ul className='nav-links grow' id={showMenu ? "mobile-show" : "mobile-hide"}>
-                    <li><a href='index.html'>Home</a></li>
-                    <li><a href='#'>Browse Art</a></li>
-                    <li><a href='#search'>My Gallery</a></li>
-                    <li><a href='#' className='cart'>{showMenu ? "Cart" : <AiOutlineShoppingCart className='cart-icon' size={34} />}</a></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/artwork'>Browse Art</Link></li>
+                    <li><Link to='/artwork/gallery'>My Gallery</Link></li>
+                    <li><Link to='/artwork/cart' className='cart'>{showMenu ? "Cart" : <AiOutlineShoppingCart className='cart-icon' size={34} />}</Link></li>
                 </ul>
             </menu>
             <div className='menu-icon' onClick={toggleMenu} >{showMenu ? <RiCloseLine size={40}/> : <GiHamburgerMenu size={34} color="#333" /> }</div>

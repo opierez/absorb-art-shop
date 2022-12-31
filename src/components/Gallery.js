@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Form() {
+function Gallery() {
     return (
         <div>
-            <h1>This is a Form</h1>
+            <h1>Gallery</h1>
         </div>
     )
 }
 
-export default Form
+export default Gallery
