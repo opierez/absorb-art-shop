@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Header.css';
-import mercury_and_psyche from '../style-images/mercury_and_psyche.jpeg'
 import {BsChevronCompactDown} from 'react-icons/bs'
+import dan_cristian_unsplash from '../style-images/dan_cristian_unsplash.jpg'
+import {Link} from 'react-router-dom'
 
 
 function Header() {
@@ -10,17 +11,16 @@ function Header() {
             <div className='header-container'>
                <div className='header-left'>
                 <h1>
-                    <span>Company Name</span>
-                    <span>Tagline</span>
+                    <span>Absorb</span>
+                    <span>Independent Art Shop</span>
                 </h1>
-                <p>Mission Statement</p>
+                <p>Explore original art by emerging artists</p>
                 <div className='header-btn'>
-                    <a href='#'>Support Local Artists</a>
-                    <a href='#'>Submit Your Artwork</a>
+                    <Link to='/artwork/new'>Submit Your Art</Link>
                 </div>
                </div>
                <div className='header-right'>
-                    <img src={mercury_and_psyche} />
+                    <img src={dan_cristian_unsplash} />
                </div>
                <div className='down-arrow'>
                 <a href='#'>
