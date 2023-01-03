@@ -20,12 +20,14 @@ function App() {
           .then(resp => resp.json())
           .then(setArtwork)
   }, [])
-
+  
+  function handleAddItem(newItem){
+    setArtwork([...artwork, newItem])
+  }
+  
   const artID = (id) => {
     setArtDetailID(id)
   }
-  
-
 
   return (
     <div className="App">
@@ -44,7 +46,7 @@ function App() {
 
         {/* /artwork/new => Form for New Artwork */}
         <Route path="/artwork/new">
-          <Form />
+          <Form handleAddItem={handleAddItem}/>
         </Route>
 
         {/* /artwork/gallery => Show Items Purchased */}
