@@ -8,19 +8,25 @@ import Cart from './Cart'
 import Gallery from './Gallery'
 import ArtDetail from './ArtDetail'
 import { Switch, Route } from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 function App() {
 
   const [artwork, setArtwork] = useState([])
+  const [artDetailID, setArtDetailID] = useState(null)
 
-    useEffect(() => {
-        fetch('http://localhost:6001/artwork')
-            .then(resp => resp.json())
-            .then(setArtwork)
-    }, [])
-
+  useEffect(() => {
+      fetch('http://localhost:6001/artwork')
+          .then(resp => resp.json())
+          .then(setArtwork)
+  }, [])
+  
   function handleAddItem(newItem){
     setArtwork([...artwork, newItem])
+  }
+  
+  const artID = (id) => {
+    setArtDetailID(id)
   }
 
   return (
@@ -38,7 +44,7 @@ function App() {
           <Cart />
         </Route>
 
-        {/* /artwork/new => Create Form for New Artwork */}
+        {/* /artwork/new => Form for New Artwork */}
         <Route path="/artwork/new">
           <Form handleAddItem={handleAddItem}/>
         </Route>
@@ -48,15 +54,17 @@ function App() {
           <Gallery />
         </Route>
 
-        {/* /artwork/:id => Show Page for Individual Artwork */}
+        {/* /artwork/:id => Show Page for Individual Artwork Details */}
         <Route path="/artwork/:id">
           <ArtDetail />
         </Route>
 
         {/* /artwork => All Artwork */}
         <Route path="/artwork">
-          <ArtContainer artwork={artwork}/>
+          <ArtContainer artwork={artwork} artID={artID}/>
         </Route>
+
+        
 
       </Switch>
     </div>
