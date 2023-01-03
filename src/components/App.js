@@ -19,7 +19,9 @@ function App() {
             .then(setArtwork)
     }, [])
 
-
+  function handleAddItem(newItem){
+    setArtwork([...artwork, newItem])
+  }
 
   return (
     <div className="App">
@@ -38,7 +40,7 @@ function App() {
 
         {/* /artwork/new => Create Form for New Artwork */}
         <Route path="/artwork/new">
-          <Form />
+          <Form handleAddItem={handleAddItem}/>
         </Route>
 
         {/* /artwork/gallery => Show Items Purchased */}

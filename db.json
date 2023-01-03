@@ -1,65 +1,95 @@
 {
-    "artwork": [
-        {
-            "id": 1,
-            "artist": "Iris Sagitta",
-            "image": "./images/Notes.jpeg",
-            "title": "Notes on Facial Hatred",
-            "product": "30x30\" Silver Gelatin Print", 
-            "price": 495.00,
-            "description": "August, 2022; self-portrait",
-            "mediums": ["photography", "silver gelatin", "silver gelatin print", "photography print", "medium format photography", "black and white photography"]
-        },
-        {
-            "id": 2,
-            "artist": "Mike Falco",
-            "image": "./images/Election_Security.jpeg",
-            "title": "Election Security",
-            "product": "20x24\" Inkjet Print",
-            "price": 50.00,
-            "description": "Editorial Illustration",
-            "mediums": ["inkjet print", "print", "illustration", "editorial"]
-        },
-        {
-            "id": 3,
-            "artist": "Renee Xie",
-            "image": "./images/Lone.jpeg",
-            "title": "Lone",
-            "product": "20x24\" Inkjet Print",
-            "price": 500.00,
-            "description": "Distance comes, distance goes. I stayed and stared, alone. ",
-            "mediums": ["photography", "print", "digital photography", "photography print"]
-        },
-        {
-            "id": 4,
-            "artist": "Chloe Pecorino",
-            "image": "./images/Dress.jpg",
-            "title": "Dot Cut-Out Belly Dress",
-            "product": "Vintage Cotton Jacquard Dress",
-            "price": 500.00,
-            "description": "Designed to show off the midriff using vintage materials. ",
-            "mediums": ["fashion", "vintage"]
-        },
-        {
-            "id": 5,
-            "artist": "Alexander Spagnoli",
-            "image": "./images/Jandro2.jpeg",
-            "title": "Lamar Misty Mountain",
-            "product": "24x36\" Inkjet Print",
-            "price": 750.00,
-            "description": "Taken handheld in a stream while hiking through the Lamar Valley in Yellowstone. The mist was rolling through the hills, the photo almost feels like a long exposure despite, in reality, having been a quick snap while the photographer was fighting the stream's current to keep his balance.",
-            "mediums": ["photography", "digital photography", "print", "photography print"]
-        },
-        {
-            "id": 6,
-            "artist": "Olivia Perez",
-            "image": "./images/Andy.jpg",
-            "title": "The End and The Beginning",
-            "product": "11x14\" Kallitype Print",
-            "price": 250.00,
-            "description": "Kallitype Over Inkjet",
-            "mediums": ["photography", "kallitype print", "inkjet print", "photography print", "print"]
-        }
-
-    ]
+  "artwork": [
+    {
+      "id": 1,
+      "artist": "Iris Sagitta",
+      "image": "./images/Notes.jpeg",
+      "title": "Notes on Facial Hatred",
+      "product": "30x30\" Silver Gelatin Print",
+      "price": 495,
+      "description": "August, 2022; self-portrait",
+      "mediums": [
+        "photography",
+        "silver gelatin",
+        "silver gelatin print",
+        "photography print",
+        "medium format photography",
+        "black and white photography"
+      ]
+    },
+    {
+      "id": 2,
+      "artist": "Mike Falco",
+      "image": "./images/Election_Security.jpeg",
+      "title": "Election Security",
+      "product": "20x24\" Inkjet Print",
+      "price": 50,
+      "description": "Editorial Illustration",
+      "mediums": [
+        "inkjet print",
+        "print",
+        "illustration",
+        "editorial"
+      ]
+    },
+    {
+      "id": 3,
+      "artist": "Renee Xie",
+      "image": "./images/Lone.jpeg",
+      "title": "Lone",
+      "product": "20x24\" Inkjet Print",
+      "price": 500,
+      "description": "Distance comes, distance goes. I stayed and stared, alone. ",
+      "mediums": [
+        "photography",
+        "print",
+        "digital photography",
+        "photography print"
+      ]
+    },
+    {
+      "id": 4,
+      "artist": "Chloe Pecorino",
+      "image": "./images/Dress.jpg",
+      "title": "Dot Cut-Out Belly Dress",
+      "product": "Vintage Cotton Jacquard Dress",
+      "price": 500,
+      "description": "Designed to show off the midriff using vintage materials. ",
+      "mediums": [
+        "fashion",
+        "vintage"
+      ]
+    },
+    {
+      "id": 5,
+      "artist": "Alexander Spagnoli",
+      "image": "./images/Jandro2.jpeg",
+      "title": "Lamar Misty Mountain",
+      "product": "24x36\" Inkjet Print",
+      "price": 750,
+      "description": "Taken handheld in a stream while hiking through the Lamar Valley in Yellowstone. The mist was rolling through the hills, the photo almost feels like a long exposure despite, in reality, having been a quick snap while the photographer was fighting the stream's current to keep his balance.",
+      "mediums": [
+        "photography",
+        "digital photography",
+        "print",
+        "photography print"
+      ]
+    },
+    {
+      "id": 6,
+      "artist": "Olivia Perez",
+      "image": "./images/Andy.jpg",
+      "title": "The End and The Beginning",
+      "product": "11x14\" Kallitype Print",
+      "price": 250,
+      "description": "Kallitype Over Inkjet",
+      "mediums": [
+        "photography",
+        "kallitype print",
+        "inkjet print",
+        "photography print",
+        "print"
+      ]
+    }
+  ]
 }
