@@ -7,7 +7,7 @@ function ArtDetail() {
     const [artwork, setArtwork] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
 
-    console.log(useParams())
+    // console.log(useParams())
 
     const { id } = useParams()
 
@@ -31,11 +31,12 @@ function ArtDetail() {
         <div className="container">
             <div className="column-1">
                 <h1>{title} by {artist}</h1>
-                <img src={image} alt={title}/>
+                <br></br>
+                <img className="image" src={image.substring(1,)} alt={title}/>
             </div>
             <div className="column-2">
                 <ul>
-                    <li>Description: {description}</li>
+                    <li>{description}</li>
                     <li>{product}</li> 
                     <li>{`$${parseFloat(price).toFixed(2)}`}</li>
                     <li>

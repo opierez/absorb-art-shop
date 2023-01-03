@@ -14,6 +14,8 @@ function ArtCard({ artpiece }) {
         history.push(`/artwork/${id}`)
     }
 
+    // console.log(image)
+
     return (
             <li className='card'>
                 <h2>{artist}</h2>
