@@ -7,6 +7,7 @@ import Form from './Form'
 import Cart from './Cart'
 import Gallery from './Gallery'
 import ArtDetail from './ArtDetail'
+import ErrorPage from './ErrorPage'
 import { Switch, Route } from 'react-router-dom'
 import {Link} from 'react-router-dom';
 
@@ -64,7 +65,10 @@ function App() {
           <ArtContainer artwork={artwork} artID={artID}/>
         </Route>
 
-        
+        {/* * => Invalid Routes */}
+        <Route path="*">
+          <ErrorPage />
+        </Route>
 
       </Switch>
     </div>

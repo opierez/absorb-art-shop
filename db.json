@@ -10,10 +10,7 @@
       "description": "August, 2022; self-portrait",
       "mediums": [
         "photography",
-        "silver gelatin",
-        "silver gelatin print",
         "photography print",
-        "medium format photography",
         "black and white photography"
       ]
     },
@@ -26,10 +23,8 @@
       "price": 50,
       "description": "Editorial Illustration",
       "mediums": [
-        "inkjet print",
         "print",
-        "illustration",
-        "editorial"
+        "illustration"
       ]
     },
     {
@@ -85,8 +80,6 @@
       "description": "Kallitype Over Inkjet",
       "mediums": [
         "photography",
-        "kallitype print",
-        "inkjet print",
         "photography print",
         "print"
       ]
