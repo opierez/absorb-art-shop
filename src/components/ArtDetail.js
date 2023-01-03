@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
-
+import '../styles/ArtDetails.css'
 
 function ArtDetail() {
 
     const [artwork, setArtwork] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
+
+    console.log(useParams())
 
     const { id } = useParams()
 
@@ -22,17 +24,25 @@ function ArtDetail() {
 
     const { artist, image, product, title, price, description } = artwork
 
-    console.log(image)
+    // console.log(image)
 
 
     return (
-        <div>
-            <h1>Art Detail</h1>
-            <h2>{artist}</h2>
-            <img src={image} alt={title}/>
-            <h3>{product}</h3>
-            <p>{price}</p>
-            <p>{description}</p>
+        <div className="container">
+            <div className="column-1">
+                <h1>{title} by {artist}</h1>
+                <img src={image} alt={title}/>
+            </div>
+            <div className="column-2">
+                <ul>
+                    <li>Description: {description}</li>
+                    <li>{product}</li> 
+                    <li>{`$${parseFloat(price).toFixed(2)}`}</li>
+                    <li>
+                        <button className="cart-button">Add to Cart</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }
