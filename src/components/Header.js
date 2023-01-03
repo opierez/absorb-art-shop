@@ -8,25 +8,26 @@ import {Link} from 'react-router-dom'
 function Header() {
     return (
        <section id='header'>
-            <div className='header-container'>
+            <div className='header-container container'>
                <div className='header-left'>
-                <h1>
-                    <span>Absorb</span>
-                    <span>Independent Art Shop</span>
-                </h1>
-                <p>Explore original art by emerging artists</p>
-                <div className='header-btn'>
-                    <Link to='/artwork/new'>Submit Your Art</Link>
+                    <h1>
+                        <span>Absorb</span>
+                        <span>Independent</span>
+                        <span>Art Shop</span>
+                    </h1>
+                    <p className='tagline'>Explore original art by emerging artists</p>
+                    <div className='header-btn'>
+                        <Link to='/artwork/new'>Submit Your Art</Link>
+                    </div>
                 </div>
-               </div>
-               <div className='header-right'>
-                    <img src={dan_cristian_unsplash} />
-               </div>
-               <div className='down-arrow'>
-                <a href='#'>
-                    <BsChevronCompactDown size={35} className='downbtn'/>
-                </a>
-            </div>
+                <div className='header-right'>
+                        <img src={dan_cristian_unsplash} />
+                </div>
+                {/* <div className='down-arrow'>
+                    <a href='#'>
+                        <BsChevronCompactDown size={35} className='downbtn'/>
+                    </a>
+                </div> */}
             </div>
        </section>
     )

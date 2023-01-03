@@ -2,18 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 3rem;
-    padding: 2rem;
+    height: 8rem;
+    z-index: 110;
 }
 
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo-text{
-    font-size: 4rem;
+    font-size: 40px;
     font-weight: 300;
     color: black;
 }
@@ -23,77 +24,71 @@
 }
 
 .nav-links li{
-    margin-left: 1rem;
+    margin-left: 10px;
     list-style: none;
 }
 
 .nav-links a{
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 300;
     color: black;
     text-decoration: none;
     margin-right: 1rem;
 }
 
 .grow li{
-    transition: all .1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .grow li:hover{
     transform: scale(1.1);
 }
 
-a.cart{
-    border: 2.75px solid transparent;
-    border-radius: 5px;
-    padding: 12px 6px 0px 6px;
-}
-
-a.cart:hover{
-    border: 2.75px solid;
-}
-
-.cart-icon{
-    stroke-width: 15px;
-}
-
 .navbar-container .menu-icon{
+    background: transparent;
+    border: none;
     display: none;
 }
 
-@media screen and
-(max-width: 900px) {
-    .nav-links{
-        display: none;
-        border: 2px solid black;
-    }
+@media screen and (max-width: 600px) {
     .navbar-container .menu-icon{
         display: block;
     }
 
-    .navbar-container #mobile-show, .navbar-container #mobile-hide{
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 8rem;
+    .navbar-container #mobile-show, 
+    .navbar-container #mobile-hide{
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        border-top: 1px solid black;
-        padding-bottom: 5px;
+        height: 90vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease
     }
     .navbar-container #mobile-show{
-        display: block;
-    }
-    .navbar-container #mobile-hide{
-        display: none;
+        background: white;
+        left: 0;
+        transition: all 0.5s ease;
+        z-index: 1;
     }
 
-    .navbar-container #mobile-show li, .navbar-container #mobile-hide li{
+    @keyframes slide-out {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+    .navbar-container #mobile-show li, 
+    .navbar-container #mobile-hide li{
         text-align: center;
-        padding: 1rem 0;
-        border-bottom: 1px solid black;
-        margin: 0 3rem;
-    }
-    .navbar-container #mobile-show li:last-child, .navbar-container #mobile-hide li:last-child{
-        border-bottom: none;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        /* border-bottom: 1px solid black; */
     }
 }
