@@ -42,6 +42,16 @@
         },
         {
             "id": 5,
+            "artist": "Alexander Spagnoli",
+            "image": "./images/Jandro2.jpeg",
+            "title": "Lamar Misty Mountain",
+            "product": "24x36\" Inkjet Print",
+            "price": 750.00,
+            "description": "Taken handheld in a stream while hiking through the Lamar Valley in Yellowstone. The mist was rolling through the hills, the photo almost feels like a long exposure despite, in reality, having been a quick snap while the photographer was fighting the stream's current to keep his balance.",
+            "mediums": ["photography", "digital photography", "print", "photography print"]
+        },
+        {
+            "id": 6,
             "artist": "Olivia Perez",
             "image": "./images/Andy.jpg",
             "title": "The End and The Beginning",
