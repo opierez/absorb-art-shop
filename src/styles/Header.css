@@ -4,14 +4,13 @@
 }
 .header-container{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 4rem;
 }
 .header-container h1{
     font-size: 4rem;
     line-height: 1.4;
+    text-transform: uppercase;
     position: relative;
     padding-bottom: 2rem;
 }
@@ -21,7 +20,8 @@
 h1 span:nth-child(1){
     font-weight: 800;
 }
-h1 span:last-child{
+h1 span:nth-child(2),
+h1 span:nth-child(3){
     font-weight: 100;
 }
 .header-container h1::after{
@@ -30,51 +30,35 @@ h1 span:last-child{
     left: 0;
     bottom: 0;
     width: 65%;
-    height: 2px;
+    height: 1px;
     background: black;
 }
 .header-left p{
-    margin: 2rem 0;
-    margin-bottom: .5rem;
+    margin: 3rem 0;
+    /* margin-bottom: .5rem; */
     color: black;
     width: 70%;
 }
 .header-btn a{
-    display: inline-flex;
-    flex-direction: row;
+    display: inline;
     font-size: 1.5rem;
     font-weight: 400;
     text-decoration: none;
     color: black;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    border: 2.75px solid black;
+    border: 2px solid black;
     border-radius: 5px;
     padding: 2px 8px;
 }
 .header-right img{
     width: 90%;
-    margin-left: 1rem;
+    margin-left: 4rem;
 }
-.down-arrow a{
-    background-color: rgba(0, 0, 0, 0.015);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    border: 1px solid black;
+@media screen and (max-width: 769px) {
+  .header-container h1 {
+    font-size: 3rem;
+  }
 }
-.downbtn{
-    stroke-width: 0.25px;
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .header-container {
       flex-direction: column;
     }
@@ -99,6 +83,9 @@ h1 span:last-child{
     }
     .header-right img {
      width: 80%;
+     margin-left: 0;
     }
   }
   
+
+   
