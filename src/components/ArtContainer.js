@@ -6,7 +6,7 @@ function ArtContainer({ artwork }) {
 
     return (
         <main>
-            <div>
+            <div>3
             <Search />
             </div>
             <div>
