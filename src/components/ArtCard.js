@@ -13,13 +13,14 @@ function ArtCard({ artpiece }) {
     }
 
     return (
+    
             <li className='card'>
                 <h2>{artist}</h2>
                 <img src={image} alt={title} onClick={() => handleClick(id)}/>
                 <h4>{title}</h4>
-                {firstDimension !== "" &&
-                    <p>{firstDimension}x{secondDimension}{unit}</p>
-                }
+                    {firstDimension !== "" &&
+                        <p>{firstDimension}x{secondDimension}{unit}</p>
+                    }
                 <p>{product} • {`$${parseFloat(price).toFixed(2)}`} </p>
             </li>
     )

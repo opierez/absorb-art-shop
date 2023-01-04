@@ -2,6 +2,7 @@
   "artwork": [
     {
       "id": 1,
+      "inCart": false,
       "artist": "Iris Sagitta",
       "image": "./images/Notes.jpeg",
       "title": "Notes on Facial Hatred",
@@ -18,6 +19,7 @@
     },
     {
       "id": 2,
+      "inCart": false,
       "artist": "Mike Falco",
       "image": "./images/Election_Security.jpeg",
       "title": "Election Security",
@@ -35,6 +37,7 @@
     },
     {
       "id": 3,
+      "inCart": false,
       "artist": "Renee Xie",
       "image": "./images/Lone.jpeg",
       "title": "Lone",
@@ -52,6 +55,7 @@
     },
     {
       "id": 4,
+      "inCart": false,
       "artist": "Chloe Pecorino",
       "image": "./images/Dress.jpg",
       "title": "Dot Cut-Out Belly Dress",
@@ -67,6 +71,7 @@
     },
     {
       "id": 5,
+      "inCart": false,
       "artist": "Alexander Spagnoli",
       "image": "./images/Jandro2.jpeg",
       "title": "Lamar Misty Mountain",
@@ -84,6 +89,7 @@
     },
     {
       "id": 6,
+      "inCart": false,
       "artist": "Olivia Perez",
       "image": "./images/Andy.jpg",
       "title": "The End and The Beginning",
@@ -95,7 +101,7 @@
       "unit": "\"",
       "mediums": [
         "photography",
-        "print", 
+        "print",
         "mixed media"
       ]
     }
