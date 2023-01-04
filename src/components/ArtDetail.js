@@ -21,7 +21,8 @@ function ArtDetail({handleAddToCart}) {
     
     if (!isLoaded) return <h2>Loading...</h2>
     
-    const { artist, image, product, title, price, description } = artwork
+    const { artist, image, product, title, price, description, firstDimension, secondDimension, unit} = artwork
+
     
     function handleCart(){
         setInCart(false)
@@ -42,6 +43,7 @@ function ArtDetail({handleAddToCart}) {
             <div className="column-2">
                 <ul>
                     <li>{description}</li>
+                    {firstDimension !== "" && <li>{firstDimension}x{secondDimension}{unit}</li>}
                     <li>{product}</li> 
                     <li>{`$${parseFloat(price).toFixed(2)}`}</li>
                     <li>
