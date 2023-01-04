@@ -8,6 +8,7 @@ function Form({handleAddItem}) {
     const history = useHistory();
     const options = ["", "Photography", "Illustration", "Print", "Fashion", "Painting", "Drawing", "Sculpture", "Mixed Media", "Digital Art"]
     const blankForm = {
+        inCart: false,
         artist: "",
         image: "",
         title: "",
@@ -26,6 +27,10 @@ function Form({handleAddItem}) {
     function handleOnChange(e){
         const { name, value } = e.target;
         setFormData({...formData, [name]: value });
+    }
+    function handleImageChange(e){
+        const { name, value } = e.target;
+        setFormData({...formData, [name]: value});
     }
     
     function showNewArtPage(myArt){
@@ -86,7 +91,7 @@ function Form({handleAddItem}) {
                     id="image" 
                     name="image" 
                     value={formData.image} 
-                    onChange={handleOnChange} 
+                    onChange={handleImageChange} 
                     placeholder="Product Image Url"
                 />
                 
