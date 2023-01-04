@@ -7,20 +7,30 @@ import Form from './Form'
 import Cart from './Cart'
 import Gallery from './Gallery'
 import ArtDetail from './ArtDetail'
+import ErrorPage from './ErrorPage'
 import { Switch, Route } from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 function App() {
 
   const [artwork, setArtwork] = useState([])
+  const [artDetailID, setArtDetailID] = useState(null)
+  const [shoppingCart, setShoppingCart] = useState([])
 
-    useEffect(() => {
-        fetch('http://localhost:6001/artwork')
-            .then(resp => resp.json())
-            .then(setArtwork)
-    }, [])
-
+  useEffect(() => {
+      fetch('http://localhost:6001/artwork')
+          .then(resp => resp.json())
+          .then(setArtwork)
+  }, [])
+  
   function handleAddItem(newItem){
     setArtwork([...artwork, newItem])
+  }
+  function handleAddToCart(newAdd){
+    setShoppingCart([...shoppingCart, newAdd])
+  }
+  const artID = (id) => {
+    setArtDetailID(id)
   }
 
   return (
@@ -35,10 +45,10 @@ function App() {
 
         {/* /artwork/cart => Show Page for Cart Items */}
         <Route path="/artwork/cart">
-          <Cart />
+          <Cart shoppingCart={shoppingCart}/>
         </Route>
 
-        {/* /artwork/new => Create Form for New Artwork */}
+        {/* /artwork/new => Form for New Artwork */}
         <Route path="/artwork/new">
           <Form handleAddItem={handleAddItem}/>
         </Route>
@@ -48,14 +58,19 @@ function App() {
           <Gallery />
         </Route>
 
-        {/* /artwork/:id => Show Page for Individual Artwork */}
+        {/* /artwork/:id => Show Page for Individual Artwork Details */}
         <Route path="/artwork/:id">
-          <ArtDetail />
+          <ArtDetail handleAddToCart={handleAddToCart}/>
         </Route>
 
         {/* /artwork => All Artwork */}
         <Route path="/artwork">
-          <ArtContainer artwork={artwork}/>
+          <ArtContainer artwork={artwork} artID={artID}/>
+        </Route>
+
+        {/* * => Invalid Routes */}
+        <Route path="*">
+          <ErrorPage />
         </Route>
 
       </Switch>

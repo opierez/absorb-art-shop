@@ -15,7 +15,13 @@
     color: black;
     margin-bottom: 10px;
   }
-  .art-form input, .art-form textarea {
+  .art-form h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 10px;
+  }
+  .art-form input, .art-form textarea, select {
     font-size: 12px;
     width: 100%;
     padding: 6px 10px;
@@ -23,6 +29,26 @@
     border: 1px solid #ddd;
     box-sizing: border-box;
     display: flex;
+  }
+  a.details {
+    text-decoration: underline;
+  }
+  .d-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .d-form input,
+  .d-form select,
+  .d-form label {
+    margin-right: 10px;
+  }
+  
+  .d-form select {
+    width: 40%;
+  }
+  .d-form label{
+    font-weight: 500;
   }
   .art-form button {
     background: transparent;
@@ -34,4 +60,5 @@
     border-radius: 5px;
     padding: 2px 8px;
     cursor: pointer;
+    margin-top: 10px;
   }

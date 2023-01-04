@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
 import "../styles/Form.css"
-import mona_lisa from "../style-images/mona_lisa.jpeg"
+
+
 
 function Form({handleAddItem}) {
+    const options = ["Photography", "Illustration", "Print", "Fashion", "Painting", "Drawing", "Sculpture", "Mixed Media", "Digital Art"]
+
     const blankForm = {
         artist: "",
         image: "",
@@ -10,15 +13,20 @@ function Form({handleAddItem}) {
         product: "",
         price: "",
         description: "",
-        mediums: [""]
+        firstDimension: "",
+        secondDimension: "",
+        unit: "",
+        mediums: ""
     };
-
+    
     const [formData, setFormData] = useState(blankForm)
+    const [addDimensions, setAddDimensions] = useState(false)
 
     function handleOnChange(e){
         const { name, value } = e.target;
         setFormData({...formData, [name]: value });
     }
+
     function handleSubmit(e){
         e.preventDefault();
         
@@ -74,18 +82,17 @@ function Form({handleAddItem}) {
                     onChange={handleOnChange} 
                     placeholder="Product Image"
                 />
-
-                <label>Product Specifications:</label>
+                
+                <label>Details:</label>
                 <input 
                     type="text" 
                     id="product" 
                     name="product" 
                     value={formData.product} 
                     onChange={handleOnChange} 
-                    placeholder="2ft 6in x 1ft 9in Oil Painting"
+                    placeholder="Oil Painting"
                 />
-
-
+                        
                 <label>Description:</label>
                 <input 
                     type="text" 
@@ -97,14 +104,9 @@ function Form({handleAddItem}) {
                 />
                 
                 <label>Mediums:</label>
-                <input 
-                    type="text" 
-                    id="mediums" 
-                    name="mediums" 
-                    value={formData.mediums} 
-                    onChange={handleOnChange} 
-                    placeholder="Oil paint"
-                />
+                <select name="mediums" value={formData.mediums} onChange={handleOnChange}>
+                    {options.map((medium)=> <option key={medium}>{medium}</option>)}
+                </select>
 
                 <label>Price:</label>
                 <input 
@@ -117,6 +119,25 @@ function Form({handleAddItem}) {
                     onChange={handleOnChange} 
                     placeholder= "860,000,000"
                 />
+                
+                <a className='details' onClick={()=>setAddDimensions(!addDimensions)}>Add Dimensions?</a>
+                    
+                    <div className='product'>
+                    {addDimensions ? 
+                         <div className='dimensions'>
+                             <label>Dimensions:</label>
+                             <div className='d-form'>
+                                <input type="number" step="1" name="firstDimension" value={formData.firstDimension} onChange={handleOnChange}/>
+                                <label>x</label> 
+                                <input type="number" step="1" name="secondDimension" value={formData.secondDimension} onChange={handleOnChange}/>
+                                <select name="unit" value={formData.unit} onChange={handleOnChange}>
+                                    <option>"</option>
+                                    <option>'</option>
+                                </select> 
+                             </div>
+                        </div> : null}   
+                    </div>
+
                 <button type="submit">UPLOAD ARTWORK</button>
             </form>
         </div>
