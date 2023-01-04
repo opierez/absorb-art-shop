@@ -2,28 +2,36 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import '../styles/ArtDetails.css'
 
-function ArtDetail() {
+function ArtDetail({handleAddToCart}) {
 
     const [artwork, setArtwork] = useState([])
     const [isLoaded, setIsLoaded] = useState(false)
+    const [inCart, setInCart] = useState(false)
 
+    
     console.log(useParams())
-
+    
     const { id } = useParams()
-
+    
     useEffect(() => {
         fetch(`http://localhost:6001/artwork/${id}`)
-            .then(resp => resp.json())
-            .then(artwork => {
-                setArtwork(artwork)
-                setIsLoaded(!isLoaded)
-            })
+        .then(resp => resp.json())
+        .then(artwork => {
+            setArtwork(artwork)
+            setIsLoaded(!isLoaded)
+        })
     }, [id])
-
+    
     if (!isLoaded) return <h2>Loading...</h2>
-
+    
     const { artist, image, product, title, price, description } = artwork
-
+    
+    function handleCart(){
+        setInCart(false)
+        if (inCart === true){
+            handleAddToCart(artwork)
+        }
+    }
     // console.log(image)
 
 
@@ -39,7 +47,7 @@ function ArtDetail() {
                     <li>{product}</li> 
                     <li>{`$${parseFloat(price).toFixed(2)}`}</li>
                     <li>
-                        <button className="cart-button">Add to Cart</button>
+                        <button className="cart-button" onClick={handleCart}>{inCart ? "In Cart!" : "Add to Cart"}</button>
                     </li>
                 </ul>
             </div>

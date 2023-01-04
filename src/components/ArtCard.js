@@ -13,7 +13,7 @@ function ArtCard({ artpiece }) {
     const handleClick = (id) => {
         history.push(`/artwork/${id}`)
     }
-
+    
     return (
             <li className='card'>
                 <h2>{artist}</h2>

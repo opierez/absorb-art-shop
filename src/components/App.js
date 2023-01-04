@@ -14,6 +14,7 @@ function App() {
 
   const [artwork, setArtwork] = useState([])
   const [artDetailID, setArtDetailID] = useState(null)
+  const [shoppingCart, setShoppingCart] = useState([])
 
   useEffect(() => {
       fetch('http://localhost:6001/artwork')
@@ -24,7 +25,9 @@ function App() {
   function handleAddItem(newItem){
     setArtwork([...artwork, newItem])
   }
-  
+  function handleAddToCart(newAdd){
+    setShoppingCart([...shoppingCart, newAdd])
+  }
   const artID = (id) => {
     setArtDetailID(id)
   }
@@ -41,7 +44,7 @@ function App() {
 
         {/* /artwork/cart => Show Page for Cart Items */}
         <Route path="/artwork/cart">
-          <Cart />
+          <Cart shoppingCart={shoppingCart}/>
         </Route>
 
         {/* /artwork/new => Form for New Artwork */}
@@ -56,7 +59,7 @@ function App() {
 
         {/* /artwork/:id => Show Page for Individual Artwork Details */}
         <Route path="/artwork/:id">
-          <ArtDetail />
+          <ArtDetail handleAddToCart={handleAddToCart}/>
         </Route>
 
         {/* /artwork => All Artwork */}

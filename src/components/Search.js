@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Search.css'
 import {AiOutlineSearch} from 'react-icons/ai'
 
+
 function Search() {
     return (
         <div className='search-bar-container'>
