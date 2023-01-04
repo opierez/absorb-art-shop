@@ -1,13 +1,15 @@
 import ArtList from './ArtList'
 import Search from './Search'
+import Filter from './Filter'
 import '../styles/ArtContainer.css'
 
-function ArtContainer({ artwork, handleSearch}) {
+function ArtContainer({ artwork, setSearchTerm, setFilter}) {
 
     return (
         <main>
-            <div id="search-container">
-            <Search handleSearch={handleSearch} />
+            <div>
+            <Search setSearchTerm={setSearchTerm} />
+            <Filter setFilter={setFilter}/>
             </div>
             <br></br>
             <div>
