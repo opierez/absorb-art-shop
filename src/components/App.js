@@ -14,8 +14,10 @@ import {Link} from 'react-router-dom';
 function App() {
 
   const [artwork, setArtwork] = useState([])
-  const [artDetailID, setArtDetailID] = useState(null)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [isSearchIconClicked, setIsSearchIconClicked] = useState(false)
   const [shoppingCart, setShoppingCart] = useState([])
+
 
   useEffect(() => {
       fetch('http://localhost:6001/artwork')
@@ -26,16 +28,27 @@ function App() {
   function handleAddItem(newItem){
     setArtwork([...artwork, newItem])
   }
+
+
+  const handleSearch = (value) => {
+    setSearchTerm(value)
+  }
+
+  const filterArtBySearch = artwork.filter(art => art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || art.title.toLowerCase().includes(searchTerm.toLowerCase()))
+  // console.log(filterArtBySearch)
+  
+  const handleSearchClick = () => {
+    setIsSearchIconClicked(!isSearchIconClicked)
+    // console.log(isSearchIconClicked)
+  }
+
   function handleAddToCart(newAdd){
     setShoppingCart([...shoppingCart, newAdd])
-  }
-  const artID = (id) => {
-    setArtDetailID(id)
   }
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar handleSearchClick={handleSearchClick}/>
       <Switch>
 
         {/* / => Home Page, Root Route */}
@@ -65,7 +78,10 @@ function App() {
 
         {/* /artwork => All Artwork */}
         <Route path="/artwork">
-          <ArtContainer artwork={artwork} artID={artID}/>
+          <ArtContainer 
+          artwork={filterArtBySearch} 
+          handleSearch={handleSearch} 
+          isSearchIconClicked={isSearchIconClicked}/>
         </Route>
 
         {/* * => Invalid Routes */}
@@ -77,5 +93,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
