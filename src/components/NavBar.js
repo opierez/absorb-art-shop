@@ -5,9 +5,9 @@ import {GiHamburgerMenu} from 'react-icons/gi';
 import {RiCloseLine} from 'react-icons/ri';
 import {Link} from 'react-router-dom';
 import CartPreview from './CartPreview';
-import {AiOutlineSearch} from 'react-icons/ai'
 
-function NavBar({ handleSearchClick }) {
+
+function NavBar() {
     const [showMenu, setShowMenu] = useState(false)
     const [showCartPreview, setShowCartPreview] = useState(false)
     
@@ -35,7 +35,6 @@ function NavBar({ handleSearchClick }) {
                     <li><Link to='/artwork' onClick={closeMenu}>Browse Art</Link></li>
                     <li><Link to='/artwork/gallery' onClick={closeMenu}>My Gallery</Link></li>
                     <li><Link to='#' onClick={closeMenu, openCart}>Cart</Link></li>
-                    <li><Link to="/artwork" onClick={() => handleSearchClick()}>{<AiOutlineSearch />}</Link></li>
                 </ul>
             </menu>
             <div className='menu-icon' onClick={toggleMenu} >{showMenu ? <RiCloseLine size={30}/> : <GiHamburgerMenu size={27} color="#333" /> }</div>
