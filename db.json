@@ -5,15 +5,13 @@
       "artist": "Iris Sagitta",
       "image": "./images/Notes.jpeg",
       "title": "Notes on Facial Hatred",
-      "product": "30x30\" Silver Gelatin Print",
+      "product": "Silver Gelatin Print",
       "price": 495,
       "description": "August, 2022; self-portrait",
+      "dimensions": "30\"x30\"",
       "mediums": [
         "photography",
-        "silver gelatin",
-        "silver gelatin print",
         "photography print",
-        "medium format photography",
         "black and white photography"
       ]
     },
@@ -22,14 +20,13 @@
       "artist": "Mike Falco",
       "image": "./images/Election_Security.jpeg",
       "title": "Election Security",
-      "product": "20x24\" Inkjet Print",
+      "product": "Inkjet Print",
       "price": 50,
       "description": "Editorial Illustration",
+      "dimensions": "20\"x24\"",
       "mediums": [
-        "inkjet print",
         "print",
-        "illustration",
-        "editorial"
+        "illustration"
       ]
     },
     {
@@ -37,9 +34,10 @@
       "artist": "Renee Xie",
       "image": "./images/Lone.jpeg",
       "title": "Lone",
-      "product": "20x24\" Inkjet Print",
+      "product": "Inkjet Print",
       "price": 500,
       "description": "Distance comes, distance goes. I stayed and stared, alone. ",
+      "dimensions": "20\"x24\"",
       "mediums": [
         "photography",
         "print",
@@ -55,6 +53,7 @@
       "product": "Vintage Cotton Jacquard Dress",
       "price": 500,
       "description": "Designed to show off the midriff using vintage materials. ",
+      "dimensions": "",
       "mediums": [
         "fashion",
         "vintage"
@@ -65,9 +64,10 @@
       "artist": "Alexander Spagnoli",
       "image": "./images/Jandro2.jpeg",
       "title": "Lamar Misty Mountain",
-      "product": "24x36\" Inkjet Print",
+      "product": "Inkjet Print",
       "price": 750,
       "description": "Taken handheld in a stream while hiking through the Lamar Valley in Yellowstone. The mist was rolling through the hills, the photo almost feels like a long exposure despite, in reality, having been a quick snap while the photographer was fighting the stream's current to keep his balance.",
+      "dimensions": "24\"x36\"",
       "mediums": [
         "photography",
         "digital photography",
@@ -80,13 +80,12 @@
       "artist": "Olivia Perez",
       "image": "./images/Andy.jpg",
       "title": "The End and The Beginning",
-      "product": "11x14\" Kallitype Print",
+      "product": "Kallitype Print",
       "price": 250,
       "description": "Kallitype Over Inkjet",
+      "dimensions": "11\"x14\"",
       "mediums": [
         "photography",
-        "kallitype print",
-        "inkjet print",
         "photography print",
         "print"
       ]
