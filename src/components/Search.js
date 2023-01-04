@@ -2,13 +2,11 @@ import React, {useState} from 'react'
 import '../styles/Search.css'
 import {AiOutlineSearch} from 'react-icons/ai'
 
-function Search({ handleSearch, isSearchIconClicked }) 
+function Search({ handleSearch, isSearchIconClicked }) {
     
-
     const handleChange = (e) => {
         handleSearch(e.target.value)
     }
-
 
     return (
         <div className='search-container' style={{display: isSearchIconClicked ? 'flex' : 'none'}}>
