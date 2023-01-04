@@ -1,42 +1,16 @@
 import React, {useState} from 'react'
 import '../styles/Search.css'
-import {AiOutlineSearch} from 'react-icons/ai'
-import styled from 'styled-components'
 
-function Search({ handleSearch }) {
 
-    const [isFilterOpen, setIsFilterOpen] = useState(false)
-    
-    const handleChange = (e) => {
-        handleSearch(e.target.value)
-    }
+function Search({ setSearchTerm }) {
 
-    const handleClick = () => {
-        setIsFilterOpen(!isFilterOpen)
-    }
 
     return (
-        <div className='search-container'>
-            <div className="row-1">
+        <div className='search-and-filter-container'>
                 <form className='search'>
-                    <input id='search-bar' type="text" placeholder=' Search...' onChange={handleChange}/>
+                    <input id='search-bar' type="text" placeholder=' Search...' onChange={e => setSearchTerm(e.target.value)}/>
                     {/* <button className='search-icon'><AiOutlineSearch /></button> */}
                 </form>
-        
-            </div>
-            <br></br>
-            {/* <div className="row-2">
-                <h2 className="filter-title">Filter by Medium:</h2>
-                <button className="medium-button">Photography</button>
-                <button className="medium-button">Illustration</button>
-                <button className="medium-button">Print</button>
-                <button className="medium-button">Fashion</button>
-                <button className="medium-button">Painting</button>
-                <button className="medium-button">Drawing</button>
-                <button className="medium-button">Sculpture</button>
-                <button className="medium-button">Mixed Media</button>
-                <button className="medium-button">Digital Art</button>
-            </div> */}
         </div>
     )
 }

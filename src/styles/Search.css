@@ -15,27 +15,14 @@
 }
 
 
-.search-container{
+.search-and-filter-container{
     display: block;
     margin: auto;
     flex-direction: column;
     width: 100vh;
-    height: 15vh;
     background-color: white;
-    border-bottom: .5px solid black;
     padding-right: 20px;
 }
-
-/* #search-bar{
-    margin: .5rem;
-    margin-right: 50px;
-    width: 100%;
-    border: 1px solid black;
-    background-color: transparent;
-    font-size: 1.25rem;
-    border-radius: 5px;
-
-} */
 
 #search-bar{
     width: 100%;
@@ -45,14 +32,6 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
-/* .search-icon{
-    background: transparent;
-    font-size: 1.25rem;
-    margin-top: 2px;
-    width: 10%;
-    border: none;
-
-} */
 
 .medium-button {
     margin: .5rem;

@@ -35,7 +35,7 @@ function NavBar() {
                     <li><Link to='/artwork' onClick={closeMenu}>Browse Art</Link></li>
                     <li><Link to='/artwork/gallery' onClick={closeMenu}>My Gallery</Link></li>
                     <li><Link to='#' onClick={closeMenu, openCart}>Cart</Link></li>
-                </ul>
+               </ul>
             </menu>
             <div className='menu-icon' onClick={toggleMenu} >{showMenu ? <RiCloseLine size={30}/> : <GiHamburgerMenu size={27} color="#333" /> }</div>
             {showCartPreview ? <CartPreview openCart={openCart}/> : null}

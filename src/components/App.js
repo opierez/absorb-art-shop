@@ -16,7 +16,7 @@ function App() {
   const [artwork, setArtwork] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
   const [shoppingCart, setShoppingCart] = useState([])
-
+  const [filter, setFilter] = useState('')
 
   useEffect(() => {
       fetch('http://localhost:6001/artwork')
@@ -28,13 +28,17 @@ function App() {
     setArtwork([...artwork, newItem])
   }
 
+  // console.log(filter)
 
-  const handleSearch = (value) => {
-    setSearchTerm(value)
-  }
-
-  const filterArtBySearch = artwork.filter(art => art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || art.title.toLowerCase().includes(searchTerm.toLowerCase()))
-  // console.log(filterArtBySearch)
+  const filteredArt = artwork.filter(art => {
+    if ((!searchTerm || 
+      art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || 
+      art.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
+        (!filter || art.mediums.includes(filter.toLowerCase()))) {
+      return true;
+    }
+    return false;
+  });
 
   function handleAddToCart(newAdd){
     setShoppingCart([...shoppingCart, newAdd])
@@ -73,8 +77,9 @@ function App() {
         {/* /artwork => All Artwork */}
         <Route path="/artwork">
           <ArtContainer 
-          artwork={filterArtBySearch} 
-          handleSearch={handleSearch}/>
+          artwork={filteredArt} 
+          setSearchTerm={setSearchTerm}
+          setFilter={setFilter}/>
         </Route>
 
         {/* * => Invalid Routes */}
