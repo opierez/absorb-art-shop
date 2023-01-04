@@ -15,7 +15,6 @@ function App() {
 
   const [artwork, setArtwork] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
-  const [isSearchIconClicked, setIsSearchIconClicked] = useState(false)
   const [shoppingCart, setShoppingCart] = useState([])
 
 
@@ -36,11 +35,6 @@ function App() {
 
   const filterArtBySearch = artwork.filter(art => art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || art.title.toLowerCase().includes(searchTerm.toLowerCase()))
   // console.log(filterArtBySearch)
-  
-  const handleSearchClick = () => {
-    setIsSearchIconClicked(!isSearchIconClicked)
-    // console.log(isSearchIconClicked)
-  }
 
   function handleAddToCart(newAdd){
     setShoppingCart([...shoppingCart, newAdd])
@@ -48,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar handleSearchClick={handleSearchClick}/>
+      <NavBar />
       <Switch>
 
         {/* / => Home Page, Root Route */}
@@ -80,8 +74,7 @@ function App() {
         <Route path="/artwork">
           <ArtContainer 
           artwork={filterArtBySearch} 
-          handleSearch={handleSearch} 
-          isSearchIconClicked={isSearchIconClicked}/>
+          handleSearch={handleSearch}/>
         </Route>
 
         {/* * => Invalid Routes */}

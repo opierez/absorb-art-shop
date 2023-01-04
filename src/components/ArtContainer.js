@@ -2,12 +2,12 @@ import ArtList from './ArtList'
 import Search from './Search'
 import '../styles/ArtContainer.css'
 
-function ArtContainer({ artwork, handleSearch, isSearchIconClicked }) {
+function ArtContainer({ artwork, handleSearch}) {
 
     return (
         <main>
-            <div>
-            <Search handleSearch={handleSearch} isSearchIconClicked={isSearchIconClicked} />
+            <div id="search-container">
+            <Search handleSearch={handleSearch} />
             </div>
             <br></br>
             <div>

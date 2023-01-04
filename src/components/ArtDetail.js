@@ -35,7 +35,7 @@ function ArtDetail({handleAddToCart}) {
         const firstChar = image.charAt(0)
         if (firstChar === "."){
             return <img className="image" src={image.substring(1,)} alt={title}/>
-        }else {
+        } else {
             return <img className="image" src={image} alt={title}/>}
     }
     // console.log(image)
