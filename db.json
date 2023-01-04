@@ -10,8 +10,7 @@
       "description": "August, 2022; self-portrait",
       "mediums": [
         "photography",
-        "photography print",
-        "black and white photography"
+        "print"
       ]
     },
     {
@@ -24,7 +23,8 @@
       "description": "Editorial Illustration",
       "mediums": [
         "print",
-        "illustration"
+        "illustration",
+        "mixed media"
       ]
     },
     {
@@ -38,8 +38,7 @@
       "mediums": [
         "photography",
         "print",
-        "digital photography",
-        "photography print"
+        "digital art"
       ]
     },
     {
@@ -51,8 +50,7 @@
       "price": 500,
       "description": "Designed to show off the midriff using vintage materials. ",
       "mediums": [
-        "fashion",
-        "vintage"
+        "fashion"
       ]
     },
     {
@@ -65,9 +63,8 @@
       "description": "Taken handheld in a stream while hiking through the Lamar Valley in Yellowstone. The mist was rolling through the hills, the photo almost feels like a long exposure despite, in reality, having been a quick snap while the photographer was fighting the stream's current to keep his balance.",
       "mediums": [
         "photography",
-        "digital photography",
-        "print",
-        "photography print"
+        "digital art",
+        "print"
       ]
     },
     {
@@ -80,8 +77,8 @@
       "description": "Kallitype Over Inkjet",
       "mediums": [
         "photography",
-        "photography print",
-        "print"
+        "print", 
+        "mixed media"
       ]
     }
   ]
