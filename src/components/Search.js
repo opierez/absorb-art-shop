@@ -23,11 +23,7 @@ function Search({ handleSearch }) {
                     {/* <button className='search-icon'><AiOutlineSearch /></button> */}
                 </form>
                 <select id="filter-select">
-                    <Option value="" disabled selected>Filter by Medium</Option>
-                    <Option value='option1'>Photography</Option>
-                    <Option value='option2'>Illustration</Option>
-                    <Option value='option3'>Fashion</Option>
-                    <Option value='option4'>Painting</Option>
+                    
                 </select>
             </div>
             <br></br>
