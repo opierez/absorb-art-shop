@@ -14,12 +14,8 @@ import {Link} from 'react-router-dom';
 function App() {
 
   const [artwork, setArtwork] = useState([])
-
   const [searchTerm, setSearchTerm] = useState('')
   const [isSearchIconClicked, setIsSearchIconClicked] = useState(false)
- 
-
-  const [artDetailID, setArtDetailID] = useState(null)
   const [shoppingCart, setShoppingCart] = useState([])
 
 
@@ -40,18 +36,14 @@ function App() {
 
   const filterArtBySearch = artwork.filter(art => art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || art.title.toLowerCase().includes(searchTerm.toLowerCase()))
   // console.log(filterArtBySearch)
-
-  console.log(isSearchIconClicked)
   
   const handleSearchClick = () => {
     setIsSearchIconClicked(!isSearchIconClicked)
-    console.log(isSearchIconClicked)
+    // console.log(isSearchIconClicked)
+  }
 
   function handleAddToCart(newAdd){
     setShoppingCart([...shoppingCart, newAdd])
-  }
-  const artID = (id) => {
-    setArtDetailID(id)
   }
 
   return (
@@ -101,5 +93,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
