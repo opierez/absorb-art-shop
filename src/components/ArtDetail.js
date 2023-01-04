@@ -8,9 +8,6 @@ function ArtDetail({handleAddToCart}) {
     const [isLoaded, setIsLoaded] = useState(false)
     const [inCart, setInCart] = useState(false)
 
-    
-    console.log(useParams())
-    
     const { id } = useParams()
     
     useEffect(() => {
@@ -39,11 +36,12 @@ function ArtDetail({handleAddToCart}) {
         <div className="container">
             <div className="column-1">
                 <h1>{title} by {artist}</h1>
-                <img src={image} alt={title}/>
+                <br></br>
+                <img className="image" src={image.substring(1,)} alt={title}/>
             </div>
             <div className="column-2">
                 <ul>
-                    <li>Description: {description}</li>
+                    <li>{description}</li>
                     <li>{product}</li> 
                     <li>{`$${parseFloat(price).toFixed(2)}`}</li>
                     <li>
