@@ -60,6 +60,18 @@ function EditArtSubmission({ onUpdateArt }) {
                 history.push('/artwork/gallery')
             })
     }
+    function handleDeleteArt(id){
+    
+    fetch(`http://localhost:6001/artwork/${id}`, {
+      method: "DELETE", 
+    })
+            .then(editedArt => {
+              console.log(editedArt)
+                // onUpdateArt(editedArt)
+                // history.push('/artwork/gallery')
+            })
+    console.log(id)
+  }
 
 
     return (

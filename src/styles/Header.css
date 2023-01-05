@@ -17,13 +17,16 @@
 .header-container h1 span{
     display: block;
 }
-h1 span:nth-child(1){
+h1 span{
+    font-weight: 550;
+}
+/* h1 span:nth-child(1){
     font-weight: 800;
 }
 h1 span:nth-child(2),
 h1 span:nth-child(3){
     font-weight: 100;
-}
+} */
 .header-container h1::after{
     content: "";
     position: absolute;

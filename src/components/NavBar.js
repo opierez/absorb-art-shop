@@ -3,6 +3,7 @@ import '../styles/NavBar.css';
 import '../styles/Search.css'
 import {GiHamburgerMenu} from 'react-icons/gi';
 import {RiCloseLine} from 'react-icons/ri';
+import {GiPaintBrush} from 'react-icons/gi'
 import {Link} from 'react-router-dom';
 
 function NavBar() {
@@ -22,7 +23,8 @@ function NavBar() {
     return (
         <nav className='navbar-container container'>
             <Link to="/" className='logo'>
-                <p className='logo-text'>our logo</p>
+                <GiPaintBrush size={30} color='#DC4A5B'/>
+                <p className='logo-text'>ABSORB</p>
             </Link>
             <menu>
                 <ul className='nav-links grow' id={showMenu ? "mobile-show" : "mobile-hide"}>

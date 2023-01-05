@@ -2,7 +2,15 @@ import React from 'react'
 import '../styles/Gallery.css'
 import { Link } from "react-router-dom"
 
-function Gallery({ myGallery, renderImage }) {
+function Gallery({ myGallery, renderImage, handleDelete }) {
+    
+    function handleDeleteArt(artpiece){
+    
+        fetch(`http://localhost:6001/artwork/${artpiece.id}`, {
+          method: "DELETE", 
+        })
+                .then(() => handleDelete(artpiece))
+      }
 
     const renderMyGallery = myGallery.map(artpiece => {
         
@@ -22,6 +30,7 @@ function Gallery({ myGallery, renderImage }) {
                 <Link to={`/artwork/${id}/edit`}>
                     <button>Edit</button>
                 </Link>
+                    <button onClick={() => handleDeleteArt(artpiece)}>Delete</button>
             </li>
         )
     })
