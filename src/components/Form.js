@@ -49,7 +49,7 @@ function Form({handleAddItem}) {
             },
             body: JSON.stringify(formData)
           }
-
+        
         fetch("http://localhost:6001/artwork", newArtwork)
             .then(resp => resp.json())
             .then(newArt => {

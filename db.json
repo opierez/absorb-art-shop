@@ -2,7 +2,7 @@
   "artwork": [
     {
       "id": 1,
-      "inCart": false,
+      "inCart": true,
       "artist": "Iris Sagitta",
       "image": "./images/Notes.jpeg",
       "title": "Notes on Facial Hatred",
@@ -71,7 +71,7 @@
     },
     {
       "id": 5,
-      "inCart": false,
+      "inCart": true,
       "artist": "Alexander Spagnoli",
       "image": "./images/Jandro2.jpeg",
       "title": "Lamar Misty Mountain",

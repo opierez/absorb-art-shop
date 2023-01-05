@@ -2,7 +2,7 @@ import ArtList from './ArtList'
 import Search from './Search'
 import '../styles/ArtContainer.css'
 
-function ArtContainer({ artwork, handleSearch, isSearchIconClicked }) {
+function ArtContainer({ artwork, handleSearch, isSearchIconClicked, renderImage }) {
 
     return (
         <main>
@@ -11,7 +11,7 @@ function ArtContainer({ artwork, handleSearch, isSearchIconClicked }) {
             </div>
             <br></br>
             <div>
-            <ArtList art={artwork}/>
+            <ArtList art={artwork} renderImage={renderImage}/>
             </div>
         </main>
     )

@@ -8,8 +8,7 @@ import Cart from './Cart'
 import Gallery from './Gallery'
 import ArtDetail from './ArtDetail'
 import ErrorPage from './ErrorPage'
-import { Switch, Route } from 'react-router-dom'
-import {Link} from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom'
 
 function App() {
 
@@ -17,38 +16,74 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('')
   const [isSearchIconClicked, setIsSearchIconClicked] = useState(false)
   const [shoppingCart, setShoppingCart] = useState([])
-
-
   useEffect(() => {
-      fetch('http://localhost:6001/artwork')
-          .then(resp => resp.json())
-          .then(setArtwork)
+    fetch('http://localhost:6001/artwork')
+    .then(resp => resp.json())
+    .then(artwork => {
+      setArtwork(artwork)
+      initializeCart(artwork)
+    })
   }, [])
   
+  const history = useHistory();
+  const initializeCart = (art) =>{
+    let initialCart = []
+    art.forEach((artpiece) => {
+      if (artpiece.inCart === true) {
+        initialCart.push(artpiece);
+      }
+    });
+    setShoppingCart(initialCart)
+  }
+
   function handleAddItem(newItem){
     setArtwork([...artwork, newItem])
   }
+  
+  const handleImgClick = (id) => {
+    history.push(`/artwork/${id}`)
+  }
 
+  function handleToggleCart(art){
+    if (art.inCart === true){
+      setShoppingCart([...shoppingCart, art])
+    }else{
+      const remove = shoppingCart.filter((item) => item.id !== art.id)
+      setShoppingCart(remove)
+    }
+  }
 
   const handleSearch = (value) => {
     setSearchTerm(value)
   }
 
   const filterArtBySearch = artwork.filter(art => art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || art.title.toLowerCase().includes(searchTerm.toLowerCase()))
-  // console.log(filterArtBySearch)
   
   const handleSearchClick = () => {
     setIsSearchIconClicked(!isSearchIconClicked)
-    // console.log(isSearchIconClicked)
   }
 
-  function handleAddToCart(newAdd){
-    setShoppingCart([...shoppingCart, newAdd])
+  function renderImage(image, title, id){
+    const firstChar = image.charAt(0)
+    if (id === undefined) {
+        if (firstChar === "."){
+          return <img className="image" src={image.substring(1,)} alt={title}/>
+      }else {
+          return <img className="image" src={image} alt={title} />}
+    } else {
+        if (firstChar === "."){
+            return <img className="image" src={image.substring(1,)} alt={title} onClick={() => handleImgClick(id)}/>
+        }else {
+            return <img className="image" src={image} alt={title} onClick={() => handleImgClick(id)}/>}
+    }
   }
 
   return (
     <div className="App">
-      <NavBar handleSearchClick={handleSearchClick}/>
+      <NavBar 
+        handleSearchClick={handleSearchClick} 
+        artwork={artwork} 
+      />
       <Switch>
 
         {/* / => Home Page, Root Route */}
@@ -58,7 +93,11 @@ function App() {
 
         {/* /artwork/cart => Show Page for Cart Items */}
         <Route path="/artwork/cart">
-          <Cart shoppingCart={shoppingCart}/>
+          <Cart 
+          renderImage={renderImage} 
+          shoppingCart={shoppingCart}
+          handleToggleCart={handleToggleCart}
+          />
         </Route>
 
         {/* /artwork/new => Form for New Artwork */}
@@ -73,7 +112,7 @@ function App() {
 
         {/* /artwork/:id => Show Page for Individual Artwork Details */}
         <Route path="/artwork/:id">
-          <ArtDetail handleAddToCart={handleAddToCart}/>
+          <ArtDetail renderImage={renderImage} handleToggleCart={handleToggleCart}/>
         </Route>
 
         {/* /artwork => All Artwork */}
@@ -81,7 +120,8 @@ function App() {
           <ArtContainer 
           artwork={filterArtBySearch} 
           handleSearch={handleSearch} 
-          isSearchIconClicked={isSearchIconClicked}/>
+          isSearchIconClicked={isSearchIconClicked}
+          renderImage={renderImage}/>
         </Route>
 
         {/* * => Invalid Routes */}
