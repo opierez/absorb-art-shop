@@ -121,6 +121,17 @@ function App() {
     setArtwork(updatedArt)
   }
 
+  function handleDelete(art){
+    const updatedGallery = myGallery.filter((item) => item.id !== art.id)
+    updateDeletedBrowse(art)
+    setMyGallery(updatedGallery)
+  }
+
+  function updateDeletedBrowse (art){
+    const updatedArt = artwork.filter((item) => item.id !== art.id)
+    setArtwork(updatedArt)
+  }
+
   return (
     <div className="App">
 
@@ -161,6 +172,7 @@ function App() {
           <Gallery 
           myGallery={myGallery}
           renderImage={renderImage}
+          handleDelete={handleDelete}
           />
         </Route>
 

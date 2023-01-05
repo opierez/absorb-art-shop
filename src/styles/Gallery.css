@@ -15,9 +15,27 @@ li {
 .card img {
   width: 100%;
 }
-
+h2{
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+h4{
+    margin-top: 8px;
+    font-size: 16px;
+}
+p{
+    font-size: 12px;
+}
 .card button {
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 5px;
+    text-decoration: none;
+    color: black;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 2px 8px;
+    background: transparent;
+    cursor: pointer;
 }
   
 @media (min-width: 768px) {
@@ -27,8 +45,7 @@ li {
   }
 
   .card {
-    width: calc(30% - 2rem);
-    height: calc(50% - 2rem)
+    width: calc(40%);
   }
 }
   
@@ -43,3 +60,19 @@ li {
     width: calc(30% - 2rem);
   }
 }
+/* ,
+    {
+      "inCart": false,
+      "artist": "Tara Atefi",
+      "image": "./images/Butterfly_Flame.jpg",
+      "title": "Butterfly ",
+      "product": "Oil Painting",
+      "price": "700",
+      "description": "This is a drawing",
+      "firstDimension": "",
+      "secondDimension": "",
+      "unit": "",
+      "mediums": "Drawing",
+      "userUploaded": true,
+      "id": 7
+    } */

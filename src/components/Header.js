@@ -11,7 +11,7 @@ function Header() {
             <div className='header-container container'>
                <div className='header-left'>
                     <h1>
-                        <span>Absorb</span>
+                        {/* <span>Absorb</span> */}
                         <span>Independent</span>
                         <span>Art Shop</span>
                     </h1>
