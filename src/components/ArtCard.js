@@ -13,7 +13,6 @@ function ArtCard({ artpiece }) {
     }
 
     return (
-    
             <li className='card'>
                 <h2>{artist}</h2>
                 <img src={image} alt={title} onClick={() => handleClick(id)}/>
