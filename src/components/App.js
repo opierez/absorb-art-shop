@@ -14,8 +14,10 @@ function App() {
 
   const [artwork, setArtwork] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
-  const [isSearchIconClicked, setIsSearchIconClicked] = useState(false)
   const [shoppingCart, setShoppingCart] = useState([])
+  const [filter, setFilter] = useState('')
+  const history = useHistory();
+
   useEffect(() => {
     fetch('http://localhost:6001/artwork')
     .then(resp => resp.json())
@@ -25,7 +27,10 @@ function App() {
     })
   }, [])
   
-  const history = useHistory();
+  function handleAddItem(newItem){
+    setArtwork([...artwork, newItem])
+  }
+
   const initializeCart = (art) =>{
     let initialCart = []
     art.forEach((artpiece) => {
@@ -35,10 +40,15 @@ function App() {
     });
     setShoppingCart(initialCart)
   }
-
-  function handleAddItem(newItem){
-    setArtwork([...artwork, newItem])
-  }
+  const filteredArt = artwork.filter(art => {
+      if ((!searchTerm || 
+        art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        art.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
+          (!filter || art.mediums.includes(filter.toLowerCase()))) {
+        return true;
+      }
+      return false;
+    });
   
   const handleImgClick = (id) => {
     history.push(`/artwork/${id}`)
@@ -51,16 +61,6 @@ function App() {
       const remove = shoppingCart.filter((item) => item.id !== art.id)
       setShoppingCart(remove)
     }
-  }
-
-  const handleSearch = (value) => {
-    setSearchTerm(value)
-  }
-
-  const filterArtBySearch = artwork.filter(art => art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || art.title.toLowerCase().includes(searchTerm.toLowerCase()))
-  
-  const handleSearchClick = () => {
-    setIsSearchIconClicked(!isSearchIconClicked)
   }
 
   function renderImage(image, title, id){
@@ -82,8 +82,7 @@ function App() {
     <div className="App">
       <NavBar 
         handleSearchClick={handleSearchClick} 
-        artwork={artwork} 
-      />
+        artwork={artwork} />
       <Switch>
 
         {/* / => Home Page, Root Route */}
@@ -118,9 +117,9 @@ function App() {
         {/* /artwork => All Artwork */}
         <Route path="/artwork">
           <ArtContainer 
-          artwork={filterArtBySearch} 
-          handleSearch={handleSearch} 
-          isSearchIconClicked={isSearchIconClicked}
+          artwork={filteredArt} 
+          setSearchTerm={setSearchTerm}
+          setFilter={setFilter}
           renderImage={renderImage}/>
         </Route>
 

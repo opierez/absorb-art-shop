@@ -2,12 +2,13 @@ import ArtList from './ArtList'
 import Search from './Search'
 import '../styles/ArtContainer.css'
 
-function ArtContainer({ artwork, handleSearch, isSearchIconClicked, renderImage }) {
+function ArtContainer({ artwork, setSearchTerm, setFilter, renderImage }) {
 
     return (
         <main>
             <div>
-            <Search handleSearch={handleSearch} isSearchIconClicked={isSearchIconClicked} />
+            <Search setSearchTerm={setSearchTerm} />
+            <Filter setFilter={setFilter}/>
             </div>
             <br></br>
             <div>
