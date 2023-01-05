@@ -106,7 +106,19 @@ function App() {
         return ogArtpiece
       }
     }) 
+    onUpdateBrowseArt(editedArt)
     setMyGallery(updatedArt)
+  }
+
+  const onUpdateBrowseArt = (editedArt) => {
+    const updatedArt = artwork.map((ogArt) => {
+      if (ogArt.id === editedArt.id) {
+        return editedArt
+      } else {
+        return ogArt
+      }
+    })
+    setArtwork(updatedArt)
   }
 
   return (
