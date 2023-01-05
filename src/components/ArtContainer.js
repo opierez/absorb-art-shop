@@ -5,6 +5,8 @@ import '../styles/ArtContainer.css'
 
 function ArtContainer({ artwork, setSearchTerm, setFilter}) {
 
+    // console.log(resultStatus)
+
     return (
         <main>
             <div>

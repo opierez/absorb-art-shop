@@ -30,15 +30,17 @@ function App() {
 
   // console.log(filter)
 
+
   const filteredArt = artwork.filter(art => {
     if ((!searchTerm || 
       art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || 
       art.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
         (!filter || art.mediums.includes(filter.toLowerCase()))) {
       return true;
-    }
+    } 
     return false;
   });
+
 
   function handleAddToCart(newAdd){
     setShoppingCart([...shoppingCart, newAdd])
