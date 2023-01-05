@@ -38,7 +38,7 @@ function ArtDetail({renderImage, handleToggleCart}) {
         .then(resp => resp.json())
         .then(resp => handleToggleCart(resp))
     }
-    
+
     return (
         <div className="container">
             <div className="column-1">

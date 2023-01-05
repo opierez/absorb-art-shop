@@ -6,7 +6,6 @@ function ArtCard({ artpiece, renderImage }) {
     const {id, artist, image, product, title, price, firstDimension, secondDimension, unit} = artpiece
 
     return (
-    
             <li className='card'>
                 <h2 className='title'>{title}</h2>
                 {renderImage(image, title, id)}

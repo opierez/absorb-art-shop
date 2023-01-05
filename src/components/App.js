@@ -16,6 +16,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('')
   const [shoppingCart, setShoppingCart] = useState([])
   const [filter, setFilter] = useState('')
+
   const history = useHistory();
 
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
     setArtwork([...artwork, newItem])
   }
 
+
   const initializeCart = (art) =>{
     let initialCart = []
     art.forEach((artpiece) => {
@@ -40,15 +42,6 @@ function App() {
     });
     setShoppingCart(initialCart)
   }
-  const filteredArt = artwork.filter(art => {
-      if ((!searchTerm || 
-        art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        art.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
-          (!filter || art.mediums.includes(filter.toLowerCase()))) {
-        return true;
-      }
-      return false;
-    });
   
   const handleImgClick = (id) => {
     history.push(`/artwork/${id}`)
@@ -62,6 +55,18 @@ function App() {
       setShoppingCart(remove)
     }
   }
+
+
+  const filteredArt = artwork.filter(art => {
+    if ((!searchTerm || 
+      art.artist.toLowerCase().includes(searchTerm.toLowerCase()) || 
+      art.title.toLowerCase().includes(searchTerm.toLowerCase())) &&
+        (!filter || art.mediums.includes(filter.toLowerCase()))) {
+      return true;
+    } 
+    return false;
+  });
+
 
   function renderImage(image, title, id){
     const firstChar = image.charAt(0)
@@ -80,8 +85,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar 
-        handleSearchClick={handleSearchClick} 
+
+      <NavBar  
         artwork={artwork} />
       <Switch>
 
@@ -119,8 +124,9 @@ function App() {
           <ArtContainer 
           artwork={filteredArt} 
           setSearchTerm={setSearchTerm}
-          setFilter={setFilter}
           renderImage={renderImage}/>
+          setFilter={setFilter}/>
+
         </Route>
 
         {/* * => Invalid Routes */}

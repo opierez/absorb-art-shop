@@ -1,5 +1,6 @@
 import ArtList from './ArtList'
 import Search from './Search'
+import Filter from './Filter'
 import '../styles/ArtContainer.css'
 
 function ArtContainer({ artwork, setSearchTerm, setFilter, renderImage }) {
