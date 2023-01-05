@@ -8,6 +8,7 @@ import Cart from './Cart'
 import Gallery from './Gallery'
 import ArtDetail from './ArtDetail'
 import ErrorPage from './ErrorPage'
+import EditArtSubmission from './EditArtSubmission';
 import { Switch, Route, useHistory } from 'react-router-dom'
 
 function App() {
@@ -97,6 +98,17 @@ function App() {
     }
   }
 
+  const onUpdateArt = (editedArt) => {
+    const updatedArt = myGallery.map((ogArtpiece) => {
+      if (ogArtpiece.id === editedArt.id) {
+        return editedArt
+      } else {
+        return ogArtpiece
+      }
+    }) 
+    setMyGallery(updatedArt)
+  }
+
   return (
     <div className="App">
 
@@ -126,16 +138,25 @@ function App() {
           />
         </Route>
 
+        {/* /artwork/edit => Edit the Art Submission */}
+        <Route path="/artwork/:id/edit">
+          <EditArtSubmission 
+          onUpdateArt={onUpdateArt}/>
+        </Route>
+
         {/* /artwork/gallery => Show Items Purchased */}
         <Route path="/artwork/gallery">
           <Gallery 
           myGallery={myGallery}
-          renderImage={renderImage}/>
+          renderImage={renderImage}
+          />
         </Route>
 
         {/* /artwork/:id => Show Page for Individual Artwork Details */}
         <Route path="/artwork/:id">
-          <ArtDetail renderImage={renderImage} handleToggleCart={handleToggleCart}/>
+          <ArtDetail 
+          renderImage={renderImage} 
+          handleToggleCart={handleToggleCart}/>
         </Route>
 
         {/* /artwork => All Artwork */}
