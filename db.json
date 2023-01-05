@@ -104,6 +104,21 @@
         "print",
         "mixed media"
       ]
+    },
+    {
+      "inCart": false,
+      "artist": "Tara Atefi",
+      "image": "./images/Butterfly_Flame.jpg",
+      "title": "Butterfly Flame",
+      "product": "Graphite",
+      "price": "450",
+      "description": "drawing",
+      "firstDimension": "",
+      "secondDimension": "",
+      "unit": "",
+      "mediums": "Mixed Media",
+      "userUploaded": true,
+      "id": 7
     }
   ]
 }
