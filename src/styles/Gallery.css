@@ -1,0 +1,45 @@
+li {
+    list-style: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.card {
+  margin: 1rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card button {
+  margin-top: 0.5rem;
+}
+  
+@media (min-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(30% - 2rem);
+    height: calc(50% - 2rem)
+  }
+}
+  
+@media (min-width: 1024px) {
+  .card {
+    width: calc(30% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: calc(30% - 2rem);
+  }
+}

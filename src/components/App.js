@@ -16,6 +16,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('')
   const [shoppingCart, setShoppingCart] = useState([])
   const [filter, setFilter] = useState('')
+  const [myGallery, setMyGallery] = useState([])
 
   const history = useHistory();
 
@@ -25,6 +26,7 @@ function App() {
     .then(artwork => {
       setArtwork(artwork)
       initializeCart(artwork)
+      initializeGallery(artwork)
     })
   }, [])
   
@@ -32,6 +34,15 @@ function App() {
     setArtwork([...artwork, newItem])
   }
 
+  const initializeGallery = (art) => {
+    let initialGallery = []
+    art.forEach((artpiece) => {
+      if (artpiece.userUploaded === true) {
+        initialGallery.push(artpiece);
+      }
+    });
+    setMyGallery(initialGallery)
+  }
 
   const initializeCart = (art) =>{
     let initialCart = []
@@ -56,6 +67,9 @@ function App() {
     }
   }
 
+  function handleGallery(newArt) {
+    setMyGallery([...myGallery, newArt])
+  }
 
   const filteredArt = artwork.filter(art => {
     if ((!searchTerm || 
@@ -106,12 +120,17 @@ function App() {
 
         {/* /artwork/new => Form for New Artwork */}
         <Route path="/artwork/new">
-          <Form handleAddItem={handleAddItem}/>
+          <Form 
+          handleAddItem={handleAddItem}
+          handleGallery={handleGallery}
+          />
         </Route>
 
         {/* /artwork/gallery => Show Items Purchased */}
         <Route path="/artwork/gallery">
-          <Gallery />
+          <Gallery 
+          myGallery={myGallery}
+          renderImage={renderImage}/>
         </Route>
 
         {/* /artwork/:id => Show Page for Individual Artwork Details */}
@@ -124,7 +143,7 @@ function App() {
           <ArtContainer 
           artwork={filteredArt} 
           setSearchTerm={setSearchTerm}
-          renderImage={renderImage}/>
+          renderImage={renderImage}
           setFilter={setFilter}/>
 
         </Route>

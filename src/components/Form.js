@@ -4,7 +4,7 @@ import {useHistory} from "react-router-dom"
 
 
 
-function Form({handleAddItem}) {
+function Form({handleAddItem, handleGallery}) {
     const history = useHistory();
     const options = ["", "Photography", "Illustration", "Print", "Fashion", "Painting", "Drawing", "Sculpture", "Mixed Media", "Digital Art"]
     const blankForm = {
@@ -18,7 +18,8 @@ function Form({handleAddItem}) {
         firstDimension: "",
         secondDimension: "",
         unit: "",
-        mediums: ""
+        mediums: "",
+        userUploaded: true
     };
     
     const [formData, setFormData] = useState(blankForm)
@@ -33,8 +34,8 @@ function Form({handleAddItem}) {
         setFormData({...formData, [name]: value});
     }
     
-    function showNewArtPage(myArt){
-        history.push(`/artwork/${myArt.id}`)
+    function showNewArtPage(){
+        history.push(`/artwork/gallery`)
     }
 
     function handleSubmit(e){
@@ -54,7 +55,8 @@ function Form({handleAddItem}) {
             .then(resp => resp.json())
             .then(newArt => {
                 handleAddItem(newArt); 
-                showNewArtPage(newArt);
+                handleGallery(newArt)
+                showNewArtPage();
             })
             .catch(() => { 
             });

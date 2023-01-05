@@ -7,9 +7,9 @@ function ArtCard({ artpiece, renderImage }) {
 
     return (
             <li className='card'>
-                <h2 className='title'>{title}</h2>
+                <h2 className='artist'>{artist}</h2>
                 {renderImage(image, title, id)}
-                <h4 className='artist'>{artist}</h4>
+                <h4 className='title'>{title}</h4>
                     {firstDimension !== "" &&
                         <p className='size'>{firstDimension}x{secondDimension}{unit}</p>
                     }
