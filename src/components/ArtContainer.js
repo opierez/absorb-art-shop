@@ -3,9 +3,7 @@ import Search from './Search'
 import Filter from './Filter'
 import '../styles/ArtContainer.css'
 
-function ArtContainer({ artwork, setSearchTerm, setFilter}) {
-
-    // console.log(resultStatus)
+function ArtContainer({ artwork, setSearchTerm, setFilter, renderImage }) {
 
     return (
         <main>
@@ -15,7 +13,7 @@ function ArtContainer({ artwork, setSearchTerm, setFilter}) {
             </div>
             <br></br>
             <div>
-            <ArtList art={artwork}/>
+            <ArtList art={artwork} renderImage={renderImage}/>
             </div>
         </main>
     )
