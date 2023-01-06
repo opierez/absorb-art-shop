@@ -17,7 +17,7 @@ When visiting the site, users can:
 - Submit your artwork via a form to be added to the shop 
 - View all artwork that you submitted to the shop on a personal "My Gallery" page
 - Edit the submitted art via form 
-- Delete submitted art from "My Gallery" and "Browse Art" pages
+- Delete your own submitted art from "My Gallery" and the shop
 
 ## How to set up the site
 

@@ -121,21 +121,6 @@
         "photography",
         "print"
       ]
-    },
-    {
-      "inCart": false,
-      "artist": "Tara Atefi",
-      "image": "./images/Butterfly_Flame.jpg",
-      "title": "Butterfly Flame ",
-      "product": "Graphite on tonal paper",
-      "price": "850",
-      "description": "In a terrarium of fungi a butterfly and dragonfly fall in flames causing the beginnings of an end",
-      "firstDimension": "15",
-      "secondDimension": "15",
-      "unit": "",
-      "mediums": "Drawing",
-      "userUploaded": true,
-      "id": 8
     }
   ]
 }
