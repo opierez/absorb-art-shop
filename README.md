@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Absorb Art Shop
+An independent art shop where you can view and purchase original artwork by emerging artists and submit your own artwork to be sold in our shop.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Functionality
 
-## Available Scripts
+When visiting the site, users can:
 
-In the project directory, you can run:
+- View a list of available art for purchase on the "Browse Art" page
+- Filter artwork by mediums 
+- Search artwork by name and title
+- Search and filter art simultaneously
+- View an enlarged version of the artwork and corresponding details
+- Add art items to your cart 
+- Review an itemized list of cart items 
+- View the total amount of items and price
+- Remove art items from cart 
+- Submit your artwork via a form to be added to the shop 
+- View all artwork that you submitted to the shop on a personal "My Gallery" page
+- Edit the submitted art via form 
+- Delete submitted art from "My Gallery" and "Browse Art" pages
 
-### `npm start`
+## How to set up the site
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+First, fork or clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone https://github.com/opierez/phase-2-project.git
+```
+Install:
 
-### `npm test`
+```
+npm install 
+```
+```
+npm run server
+```
+Open a separate terminal and run:
+```
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies
 
-### `npm run build`
+- React
+- Javascript
+- JSON
+- React Router DOM
+- React Icons
+- Custom CSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Preview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Home page
+![Absorb-Home](./readme-images/Home.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Browse Art page
+![Absorb-Browse-Art](./readme-images/Browse_Art.png)
 
-### `npm run eject`
+## Submit Artwork page
+![Absorb-Submit-Artwork](./readme-images/Form.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## My Gallery page
+![Absorb-My-Gallery](./readme-images/My_Gallery.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Cart page
+![Absorb-Cart](./readme-images/Cart.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Notes/Credits:
+- Some of the Card.css was taken from the following Flatiron lab: https://github.com/learn-co-curriculum/react-hooks-mock-code-challenge-plantshop
+- W3Schools for basic CSS
+- Homepage image by Dan Cristian Pădureț: https://unsplash.com/photos/2mmy_G4PaNs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Artist Credits:
+- "Notes on Facial Hatred" by Iris Sagitta 
+- "Election Security" by Mike Falco
+- "Lone" by Renee Xie
+- "Dot Cut-Out Belly Dress" by Chloe Pecorino
+- "Lamar Misty Mountain" by Alexander Spagnoli
+- "The End and The Beginning" by Olivia Perez
+- "Butterfly Flame" by Tara Atefi 
+- "Up There" by Elizabeth Nahum-Albright
 
-## Learn More
+## Team
+**Alexis Fonte**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Profile](https://github.com/alexisfonte)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Olivia Perez**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Profile](https://github.com/opierez)

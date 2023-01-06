@@ -106,19 +106,36 @@
       ]
     },
     {
+      "id": 7,
+      "inCart": false,
+      "artist": "Elizabeth Nahum-Albright",
+      "image": "./images/Up_There.jpeg",
+      "title": "Up There",
+      "product": "Archival Pigment Print",
+      "price": 400,
+      "description": "Cabin in the woods",
+      "firstDimension": "20",
+      "secondDimension": "20",
+      "unit": "\"",
+      "mediums": [
+        "photography",
+        "print"
+      ]
+    },
+    {
       "inCart": false,
       "artist": "Tara Atefi",
       "image": "./images/Butterfly_Flame.jpg",
-      "title": "Butterfly ",
-      "product": "Oil Painting",
-      "price": "700",
-      "description": "This is a drawing",
-      "firstDimension": "",
-      "secondDimension": "",
+      "title": "Butterfly Flame ",
+      "product": "Graphite on tonal paper",
+      "price": "850",
+      "description": "In a terrarium of fungi a butterfly and dragonfly fall in flames causing the beginnings of an end",
+      "firstDimension": "15",
+      "secondDimension": "15",
       "unit": "",
       "mediums": "Drawing",
       "userUploaded": true,
-      "id": 7
+      "id": 8
     }
   ]
 }
