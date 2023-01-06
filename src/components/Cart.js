@@ -59,7 +59,7 @@ function Cart({renderImage, shoppingCart, handleToggleCart}) {
                     <ul className='cart-items'>{renderCartList}</ul>
                 </div>
                 <div className='checkout'>
-                    <p>{`Total (${shoppingCart.length} items): ${parseFloat(totalPrice).toFixed(2)}`}</p>
+                    <p>{`Total (${shoppingCart.length} items): $${parseFloat(totalPrice).toFixed(2)}`}</p>
                 </div>
             </div>
         </article>
