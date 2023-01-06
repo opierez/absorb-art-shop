@@ -37,6 +37,17 @@ p{
     background: transparent;
     cursor: pointer;
 }
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-results a {
+  color: blue;
+}
   
 @media (min-width: 768px) {
   .cards {
@@ -60,19 +71,3 @@ p{
     width: calc(30% - 2rem);
   }
 }
-/* ,
-    {
-      "inCart": false,
-      "artist": "Tara Atefi",
-      "image": "./images/Butterfly_Flame.jpg",
-      "title": "Butterfly ",
-      "product": "Oil Painting",
-      "price": "700",
-      "description": "This is a drawing",
-      "firstDimension": "",
-      "secondDimension": "",
-      "unit": "",
-      "mediums": "Drawing",
-      "userUploaded": true,
-      "id": 7
-    } */
