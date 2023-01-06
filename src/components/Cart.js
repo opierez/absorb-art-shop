@@ -24,7 +24,8 @@ function Cart({renderImage, shoppingCart, handleToggleCart}) {
                         }
                     <p className='product'>{product} • {`$${parseFloat(price).toFixed(2)}`} </p>
                 </div>
-                <button onClick={() => handleDelete(id)}>X</button>
+                <div className="column-2"></div>
+                <button className="delete_button" onClick={() => handleDelete(id)}>X</button>
             </li>
             )
     })
