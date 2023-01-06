@@ -3,6 +3,8 @@ import '../styles/Gallery.css'
 import { Link } from "react-router-dom"
 
 function Gallery({ myGallery, renderImage, handleDelete }) {
+
+    // console.log(myGallery)
     
     function handleDeleteArt(artpiece){
     
@@ -15,7 +17,7 @@ function Gallery({ myGallery, renderImage, handleDelete }) {
     const renderMyGallery = myGallery.map(artpiece => {
         
         const {id, artist, image, product, title, price, firstDimension, secondDimension, unit, description, mediums} = artpiece
- 
+
         return (
             <li className='card'>
                 <h2 className='artist'>{artist}</h2>
@@ -35,9 +37,25 @@ function Gallery({ myGallery, renderImage, handleDelete }) {
         )
     })
 
+    const checkGallery = () => {
+        console.log(myGallery)
+        if (myGallery.length === 0) {
+            return (
+                <div className="no-results">
+                    <p>You have not submitted any art.</p>
+                    <p>Click <Link to="/artwork/new">here</Link> to be submit your artwork</p>
+                </div>
+            )
+          } else {
+            return (
+                <div>{renderMyGallery}</div>
+            ) 
+          }
+    } 
+
     return (
         <div>
-            {renderMyGallery}
+            {checkGallery()}
         </div>
     )
 }
